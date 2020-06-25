@@ -125,6 +125,8 @@ spec:
   {{- end }}
 {{- end }}
 
+          {{ .Values.additionalServerCommands }}
+
           exec bin/nifi.sh run & nifi_pid="$!"
 
           function offloadNode() {
